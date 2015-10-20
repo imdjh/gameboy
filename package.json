@@ -3,9 +3,8 @@
   "version": "0.1.2",
   "description": "gameboy emulator by grantgalitz",
   "dependencies": {
-    "emitter": "http://github.com/component/emitter/archive/1.2.0.tar.gz",
-    "debug": "2.2.0",
-    "canvas": "1.2.0"
+    "component-emitter": "^1.2.0",
+    "canvas": "^1.2.10"
   },
   "devDependencies": {
     "debug": "2.2.0"
