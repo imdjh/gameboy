@@ -1,5 +1,5 @@
 
-var Emitter = require('emitter');
+var Emitter = require('component-emitter');
 var debug = require('debug')('gameboy');
 
 module.exports = GameBoyCore;
@@ -4764,7 +4764,7 @@ GameBoyCore.prototype.interpretCartridge = function () {
         this.gameCode += String.fromCharCode(this.ROMImage[index]);
       }
     }
-    
+
     extra = String.fromCharCode(this.ROMImage[0x143]);
   }
 
@@ -6486,7 +6486,7 @@ GameBoyCore.prototype.initializeReferencesFromSaveState = function () {
       this.OBJPalette = this.gbOBJColorizedPalette;
       this.updateGBBGPalette = this.updateGBColorizedBGPalette;
       this.updateGBOBJPalette = this.updateGBColorizedOBJPalette;
-      
+
     }
     else {
       this.BGPalette = this.gbBGPalette;
@@ -7651,7 +7651,7 @@ GameBoyCore.prototype.memoryReadJumpCompile = function () {
             parentObj.memory[0xFF04] = (parentObj.memory[0xFF04] + (parentObj.DIVTicks >> 8)) & 0xFF;
             parentObj.DIVTicks &= 0xFF;
             return parentObj.memory[0xFF04];
-            
+
           };
           break;
         case 0xFF05:
